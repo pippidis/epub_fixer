@@ -212,11 +212,12 @@ class EpubFixer:
         Path(input_folder).mkdir(parents=True, exist_ok=True)
         Path(output_folder).mkdir(parents=True, exist_ok=True)
 
-
+print('test')
 
 if __name__=="__main__":
     fixer = EpubFixer()
     epubs = fixer.find_epubs(INPUT_FOLDER)
     for epub in epubs:
         #fixer.find_regex(epub, '\\[0-9a-z]{3}')
+        print('test')
         fixer.fix(epub_path=epub, output_folder=OUTPUT_FOLDER, replace_dict=REPLACE, remove_list=REMOVE)
